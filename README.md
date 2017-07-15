@@ -1,5 +1,7 @@
 # python-undoable-transaction
 
+[![Build Status](https://travis-ci.org/nbigot/python-undoable-transaction.svg?branch=master)](https://travis-ci.org/nbigot/python-undoable-transaction)
+
 Python package for undoable transaction
 
 
