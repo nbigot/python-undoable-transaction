@@ -21,6 +21,8 @@ https://pypi.python.org/pypi/undoable_transaction
 ## Simple example
 
 ```python
+import sys
+import logging
 from undoable_transaction.transaction import Transaction
 
 
@@ -60,12 +62,11 @@ def run():
         'rollbacks': [],
         'history': [],
         'common': {},
-        'simulate_error': simulate_error
     }
 
     trans = Transaction(logger=logging, transaction_description=trans_desc_scenario)
     result = trans.run(context=trans_context)
-
+    print(result)
 
 
 def init_log():
