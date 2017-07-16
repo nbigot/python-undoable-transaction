@@ -157,7 +157,7 @@ class Transaction(object):
         try:
             # rollback reverse each already commited step
             for step_index, label, commit_fn, rollback_fn, panic_fn in \
-                    self.trans_step_steps[:exception_at_commit_step_index+1][::-1]:
+                    self.trans_step_steps[:exception_at_commit_step_index + 1][::-1]:
                 try:
                     self.context['step_index'] = step_index
                     self.pre_rollback(step_index)
