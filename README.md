@@ -89,7 +89,7 @@ print("end.")
 | **What**          | **Directory**                        |
 |-------------------|--------------------------------------|
 |source code        |_undoable_transaction/_               |
-|tests              |_test/_                               |
+|tests              |_tests/_                              |
 
 
 ## License
