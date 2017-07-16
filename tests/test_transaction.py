@@ -3,6 +3,7 @@
 
 import pytest
 import logging
+import platform
 from undoable_transaction.transaction import Transaction
 
 
@@ -10,16 +11,19 @@ from undoable_transaction.transaction import Transaction
 def init_logger():
     root = logging.getLogger()
     root.setLevel(logging.DEBUG)
-    if False:  # change this flag to switch log output
+    if platform.python_version().startswith('2'):
+        # python 2
         # log at stdout
         import sys
         ch = logging.StreamHandler(sys.stdout)
     else:
+        # python 3
         # log into queue
         import queue
         que = queue.Queue(-1)  # no limit on size
         from logging import handlers
-        ch = handlers.QueueHandler(que)
+        ch = logging.handlers.QueueHandler(que)
+
     ch.setLevel(logging.DEBUG)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     ch.setFormatter(formatter)
@@ -73,7 +77,7 @@ def test_run_scenario_1(init_logger, simulate_error, expected):
     trans = Transaction(logger=logging, transaction_description=trans_desc_scenario)
     result = trans.run(context=trans_context)
     assert result is expected
-    # look at logs: init_logger.queue.queue
+    # (python 3) look at logs: init_logger.queue.queue
 
 
 @pytest.mark.parametrize("simulate_error,expected", [
@@ -147,7 +151,7 @@ def test_run_scenario_2(init_logger, simulate_error, expected):
     trans = Transaction(logger=logging, transaction_description=trans_desc_scenario)
     result = trans.run(context=trans_context)
     assert result is expected
-    # look at logs: init_logger.queue.queue
+    # (python 3) look at logs: init_logger.queue.queue
 
 
 @pytest.mark.parametrize("simulate_error,expected", [
@@ -264,4 +268,4 @@ def test_run_scenario_3(init_logger, simulate_error, expected):
     result = trans.run(context=trans_context)
     logging.info("end with result {}.".format(result))
     assert result is expected
-    # look at logs: init_logger.queue.queue
+    # (python 3) look at logs: init_logger.queue.queue
