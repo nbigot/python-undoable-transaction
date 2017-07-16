@@ -12,6 +12,7 @@ setup(
     license='MIT',
     keywords=['undo', 'undoable', 'transaction'],
     url='https://github.com/nbigot/python-undoable-transaction',
+    download_url = 'https://github.com/nbigot/python-undoable-transaction/archive/0.1.0.tar.gz',
     platforms='any',
     tests_require=[
         'pytest>=2.5.0'
