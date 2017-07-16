@@ -21,8 +21,8 @@ def init_logger():
         # log into queue
         import queue
         que = queue.Queue(-1)  # no limit on size
-        from logging import handlers
-        ch = logging.handlers.QueueHandler(que)
+        from logging.handlers import QueueHandler
+        ch = QueueHandler(que)
 
     ch.setLevel(logging.DEBUG)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
