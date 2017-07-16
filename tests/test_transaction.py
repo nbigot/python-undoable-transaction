@@ -2,8 +2,8 @@
 """Tests for Transaction"""
 
 import pytest
-from transaction import Transaction
 import logging
+from undoable_transaction.transaction import Transaction
 
 
 @pytest.fixture()

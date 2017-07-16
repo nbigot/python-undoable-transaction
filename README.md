@@ -1,4 +1,4 @@
-# python-undoable-transaction
+# undoable_transaction
 
 [![Build Status](https://travis-ci.org/nbigot/python-undoable-transaction.svg?branch=master)](https://travis-ci.org/nbigot/python-undoable-transaction)
 
@@ -10,18 +10,18 @@ Python package for undoable transaction
 Supported in python version 3.x and 2.7
 
 ```
-pip install python-undoable-transaction
+pip install undoable_transaction
 ```
 
 ## Get it from pypi
 
-https://pypi.python.org/pypi/python-undoable-transaction
+https://pypi.python.org/pypi/undoable_transaction
 
 
 ## Simple example
 
 ```python
-from python-undoable-transaction import Transaction
+from undoable_transaction.transaction import Transaction
 
 
 def run():
@@ -88,7 +88,7 @@ print("end.")
 
 | **What**          | **Directory**                        |
 |-------------------|--------------------------------------|
-|source code        |_python-undoable-transaction/_        |
+|source code        |_undoable_transaction/_               |
 |tests              |_test/_                               |
 
 
