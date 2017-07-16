@@ -8,7 +8,7 @@ setup(
     author='Nicolas Bigot',
     author_email='nicbigot@gmail.com',
     description='Undoable transaction',
-    long_description=long_description='Undoable transaction',
+    long_description='Undoable transaction',
     license='MIT',
     keywords=['undo', 'undoable', 'transaction'],
     url='https://github.com/nbigot/python-undoable-transaction',

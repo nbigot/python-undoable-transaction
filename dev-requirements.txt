@@ -1,0 +1,10 @@
+# Dependencies for running the tests with py.test
+pytest
+pytest-cov
+mock
+# Code coverage uploader for Travis:
+codecov
+# Misc
+flake8
+check-manifest
+readme_renderer
