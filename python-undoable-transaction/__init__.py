@@ -7,5 +7,4 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from transaction import Transaction
-
+# from transaction import Transaction
